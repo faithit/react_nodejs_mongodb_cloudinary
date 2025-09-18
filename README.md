@@ -1,6 +1,7 @@
 # Product Management App
 
-A full-stack application for managing products, built with **React**, **Node.js/Express**, **MongoDB**, and **Cloudinary** for image storage. Users can add products with images and view the product list.
+A full-stack application for managing products, built with **React**, **Node.js/Express**, **MongoDB**, and **Cloudinary** for image storage. 
+Users can add products with images and view the product list.
 
 ---
 
@@ -50,3 +51,17 @@ backend/ # Node.js/Express API
 ├─ routes/
 └─ productRoutes.js
 └─ server.js
+
+---
+
+## Installation
+
+### Backend
+
+1. Clone the repository:
+
+```bash
+git clone <your-repo-url>
+cd backend
+```
+2.Install dependencies:

@@ -65,3 +65,6 @@ git clone <your-repo-url>
 cd backend
 ```
 2.Install dependencies:
+```bash
+npm install
+```

@@ -26,6 +26,23 @@ npm run dev
 ```
 The backend will run at http://localhost:5000.
 
-###Frontend
+### Frontend
 
-Navigate to frontend:
+1.Navigate to frontend:
+```bash
+cd frontend
+```
+2.Install dependencies:
+```bash
+npm install
+```
+3.Start the React app:
+```bash
+npm start
+```
+The frontend will run at http://localhost:5173.
+### How to Upload Images with Cloudinary
+
+## Sign up for Cloudinary
+
+Go to Cloudinary

@@ -43,6 +43,6 @@ npm start
 The frontend will run at http://localhost:5173.
 ### How to Upload Images with Cloudinary
 
-## Sign up for Cloudinary
+#### Sign up for Cloudinary
 
 Go to Cloudinary

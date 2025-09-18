@@ -56,6 +56,3 @@ backend/ # Node.js/Express API
 
 ## [Installation](installation.md)
 
-
-npm install
-```

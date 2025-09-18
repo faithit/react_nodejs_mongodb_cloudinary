@@ -54,17 +54,8 @@ backend/ # Node.js/Express API
 
 ---
 
-## Installation
+## [Installation](installation.md)
 
-### Backend
 
-1. Clone the repository:
-
-```bash
-git clone <your-repo-url>
-cd backend
-```
-2.Install dependencies:
-```bash
 npm install
 ```

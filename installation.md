@@ -45,9 +45,9 @@ The frontend will run at http://localhost:5173.
 
 ####  **Sign up for [Cloudinary](https://cloudinary.com/)**
 
-Go to Cloudinary and create a free account.
+Go to Cloudinary[Cloudinary](https://cloudinary.com/) and create a free account.
 After signing up, go to your **Dashboard** to get your credentials:
 
  - **Cloud Name**
-     - **API Key**
-     - **API Secret**
+ - **API Key**
+ - **API Secret**

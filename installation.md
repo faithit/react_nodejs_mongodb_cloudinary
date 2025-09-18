@@ -43,12 +43,11 @@ npm start
 The frontend will run at http://localhost:5173.
 ### How to Upload Images with Cloudinary
 
-#### Sign up for Cloudinary
+####  **Sign up for [Cloudinary](https://cloudinary.com/)**
 
 Go to Cloudinary and create a free account.
-After signing up, go to your Dashboard to get your credentials:
-Cloud Name
+After signing up, go to your **Dashboard** to get your credentials:
 
-API Key
-
-API Secret
+ - **Cloud Name**
+     - **API Key**
+     - **API Secret**

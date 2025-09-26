@@ -8,12 +8,14 @@ import ProductList from "../components/ProductList";
 import {
   LayoutDashboard,
   Package,
+  MessageSquare,
   Users,
   Settings,
   Search,
   LogOut,
   Menu,
 } from "lucide-react";
+import MessagesList from "../components/admin/MessagesList.jsx";
 
 function AdminDashboard() {
   const [products, setProducts] = useState([]);
@@ -86,7 +88,13 @@ function AdminDashboard() {
             <Package size={20} />
             {!collapsed && "Products"}
           </Link>
-
+        <Link
+          to="/dashboard/messages"
+          className="flex items-center gap-3 p-3 rounded-lg hover:bg-green-800 transition"
+        >
+          <MessageSquare size={20} />
+          {!collapsed && "Messages"}
+        </Link>
           <Link
             to="/dashboard/users"
             className="flex items-center gap-3 p-3 rounded-lg hover:bg-green-800 transition"
@@ -191,6 +199,9 @@ function AdminDashboard() {
                   <p className="text-gray-600">App settings will go here...</p>
                 </div>
               }
+            />
+            <Route path="messages"
+           element={<MessagesList />}
             />
           </Routes>
         </main>

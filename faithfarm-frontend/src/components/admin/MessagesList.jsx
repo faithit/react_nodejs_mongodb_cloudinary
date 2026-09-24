@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Trash2, CheckCircle, Mail } from "lucide-react";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 function MessagesList() {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -10,7 +12,7 @@ function MessagesList() {
   const fetchMessages = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:5000/api/contacts");
+      const res = await axios.get(`${API_URL}/api/contacts`);
       setMessages(res.data);
     } catch (err) {
       console.error("Error fetching messages:", err);
@@ -28,7 +30,7 @@ function MessagesList() {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this message?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/contacts/${id}`);
+      await axios.delete(`${API_URL}/api/contacts/${id}`);
       setMessages(messages.filter((msg) => msg._id !== id));
     } catch (err) {
       console.error("Error deleting message:", err);
@@ -38,7 +40,7 @@ function MessagesList() {
   // ✅ Toggle read/unread
   const handleToggleRead = async (id) => {
     try {
-      const res = await axios.patch(`http://localhost:5000/api/contacts/${id}`);
+      const res = await axios.patch(`${API_URL}/api/contacts/${id}`);
       setMessages(
         messages.map((msg) => (msg._id === id ? { ...msg, read: res.data.read } : msg))
       );

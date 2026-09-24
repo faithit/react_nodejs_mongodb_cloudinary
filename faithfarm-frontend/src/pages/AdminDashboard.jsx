@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import ProductForm from "../components/ProductForm";
 import ProductList from "../components/ProductList";
@@ -26,7 +28,7 @@ function AdminDashboard() {
   // ✅ Load products only when needed
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get(`${API_URL}/api/products`)
       .then((res) => setProducts(res.data))
       .catch((err) => console.error(err));
   }, []);
@@ -37,7 +39,7 @@ function AdminDashboard() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/products/${id}`);
+      await axios.delete(`${API_URL}/api/products/${id}`);
       setProducts(products.filter((p) => p._id !== id));
     } catch (err) {
       console.error("Delete failed", err);
@@ -47,7 +49,7 @@ function AdminDashboard() {
   const handleUpdate = async (id, updatedData) => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/products/${id}`,
+        `${API_URL}/api/products/${id}`,
         updatedData
       );
       setProducts(products.map((p) => (p._id === id ? res.data : p)));

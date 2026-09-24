@@ -4,7 +4,19 @@ const productRoutes = require("./routes/productRoutes");
 const contactRoutes = require("./routes/contactRoutes");
 const app = express();
 
-app.use(cors({ origin: true }));
+// CORS configuration for production and development
+const allowedOrigins = [
+  "https://your-vercel-url.vercel.app", // Production (replace with your actual Vercel URL)
+  "http://localhost:3000",  // Local development (if using port 3000)
+  "http://localhost:5173",  // Vite default development port
+];
+
+app.use(cors({ 
+  origin: allowedOrigins,
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  allowedHeaders: ["Content-Type"],
+}));
 app.use(express.json());
 
 // Routes
